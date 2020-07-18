@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- documentation at http://getbootstrap.com/docs/4.1/, alternative themes at https://bootswatch.com/ -->
+
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap" rel="stylesheet">
+		<link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/style">  <!--after the bootstrap style so that I can override any changes-->
+
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+		<title>Google: Search Image</title>
+
+	</head>
+    <body>
+		<nav class="navbar navbar-expand-md navbar-light bg-light border">
+			<button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbar" data-toggle="collapse" type="button">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbar">
+				<ul class="navbar-nav mr-auto">
+					<li>
+						<a class="logo_top_right" style="text-decoration: none; color:black; font-size: 15pt;" href="file:///C:/Users/Panagiotis/Desktop/CS50W/project_0/search/index.html">
+						<div id="logo-and-name">
+                            Google
+							<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                                <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                            </svg>
+						</div>
+						</a>
+					</li>
+				</ul>
+
+				<ul class="navbar-nav ml-auto mt-2">
+					<li class="nav-item">
+						<a class="nav-link" href="file:///C:/Users/Panagiotis/Desktop/CS50W/project_0/search/index.html">Google Search</a>
+					</li>
+				</ul>
+			</div>
+        </nav>
+
+        <div class="basic_container">
+            <div class="index_search_container">
+                <p class="main_title">Google Images</p>
+                <form action="https://google.com/search">
+                    <input type="text" autocomplete="off" name="q" class="input_search_box">
+                    <p style="padding-top:10px;"></p>
+                    <input type="hidden" name="tbm" value="isch">
+                    <input type="submit" value="Search Images" class="search_button">
+                </form>
+            </div>
+        </div>
+	</body>
+</html>
+
+<style>
+    .basic_container {
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+    .index_search_container {
+        display: flex;           /* establish flex container */
+        flex-direction: column;  /* make main axis vertical */
+        justify-content: center; /* center items vertically, in this case */
+        align-items: center;
+        height: 89.5vh;
+    }
+    .search_button {
+        /* border: none; */
+        padding: 6px 6px;
+        text-align: center;
+        text-decoration: none;
+        /* display: inline-block; */
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        color: rgb(43, 42, 42);
+        font-size: 14px;
+        /* margin: 4px 40px; */
+        cursor: pointer;
+        border-radius: 7px 7px;
+        border-color: rgb(185, 184, 184);
+        background-color: rgb(236, 235, 235);
+        margin-left: 60px;
+    }
+    .search_button:hover {
+        text-decoration: none;
+        border-color: black;
+    }
+    .main_title {
+        font-size: 40pt;
+        font-family: 'Bad Script', cursive, Arial, Helvetica, sans-serif;
+    }
+
+    .input_search_box {
+        margin-left: 10px;
+        outline: none;  /* to remove the square border when the text box is clicked */
+        border-radius: 30px 30px 30px 30px;
+        border-color: black;
+        width: 200px;
+    }
+</style>
